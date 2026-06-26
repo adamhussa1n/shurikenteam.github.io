@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Shuriken Team</title>
 
-  <link href="stylesheet.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 40px;
+
+      /* Diagonal stripes from top-right to bottom-left */
+      background: repeating-linear-gradient(
+        -45deg,
+        #FD7AC0 0px,
+        #FD7AC0 40px,
+        #FDB3DD 40px,
+        #FDB3DD 80px
+      );
+    }
+
+    img {
+      transform: scale(1.75);
+      transform-origin: top center;
+    }
+  </style>
 
 </head>
-
 <body>
-  <div class="main">
-    <img src="sakuralogo.png" class="logo" alt="Sakura Super Mario Bros. logo">
-  </div>
-</body>
 
+  <img src="sakuralogo.png" alt="Sakura Super Mario Bros.">
+
+</body>
 </html>
