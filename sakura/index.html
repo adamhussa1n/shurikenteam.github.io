@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sakura SMB</title>
 
   <style>
@@ -24,22 +22,24 @@
 
     .game-box {
       width: 550px;
+      min-height: 220px;
       background: white;
       border-radius: 25px;
       padding: 35px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .game-logo {
-      display: block;
-      height: 120px;
       width: auto;
+      height: 120px;
+      display: block;
       margin: 0 auto 20px;
     }
 
     .game-box h2 {
-      margin: 0 0 35px;
+      margin-top: 0;
+      margin-bottom: 35px;
       color: #333;
       font-size: 34px;
     }
@@ -52,10 +52,8 @@
     }
 
     .screenshots img {
-      display: block;
       width: 100%;
-      aspect-ratio: 719 / 448;
-      object-fit: cover;
+      display: block;
       border-radius: 12px;
     }
 
@@ -66,8 +64,8 @@
       color: white;
       text-decoration: none;
       border-radius: 15px;
-      font-size: 34px;
       font-weight: bold;
+      font-size: 34px;
       transition: background 0.2s;
     }
 
@@ -75,6 +73,7 @@
       background: #f25cab;
     }
   </style>
+
 </head>
 <body>
 
