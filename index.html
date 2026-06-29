@@ -1,109 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Shuriken Team</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shuriken Team</title>
 
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding-top: 5px;
-      background: repeating-linear-gradient(
-        -45deg,
-        #FD7AC0 0px,
-        #FD7AC0 20px,
-        #FDB3DD 20px,
-        #FDB3DD 40px
-      );
-      font-family: Arial, sans-serif;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    perspective:300px;
+    transform-style:preserve-3d;
+    overflow-x:hidden;
+    background:#FD7AC0;
+}
+
+.parallax-bg{
+    position:fixed;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    z-index:-2;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #FD7AC0 0px,
+            #FD7AC0 20px,
+            #FDB3DD 20px,
+            #FDB3DD 40px
+        );
+    transform:translateZ(-1000px) scale(4.5);
+    will-change:transform;
+}
+
+.content{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
+    padding-top:5px;
+    transform-style:preserve-3d;
+}
+
+.logo{
+    width:500px;
+    height:auto;
+    display:block;
+    margin-bottom:30px;
+}
+
+.gamebox{
+    width:800px;
+    min-height:320px;
+    background:white;
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+    margin-bottom:40px;
+}
+
+.gamelogo{
+    width:450px;
+    height:auto;
+    display:block;
+    margin:0 auto 45px;
+}
+
+.gamebutton{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 28px;
+    background:#FD7AC0;
+    color:white;
+    text-decoration:none;
+    border-radius:18px;
+    font-weight:bold;
+    font-size:42px;
+    transition:background .2s;
+}
+
+.gamebutton:hover{
+    background:#f25cab;
+}
+
+.discord{
+    display:inline-block;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.discord img{
+    width:60px;
+    display:block;
+}
+
+@media (max-width:900px){
+
+    .logo{
+        width:90%;
     }
 
-    .logo {
-      width: 500px;
-      height: auto;
-      display: block;
-      margin-bottom: 30px;
+    .gamebox{
+        width:95%;
+        padding:20px;
     }
 
-    .gamebox {
-      width: 800px;
-      min-height: 320px;
-      background: white;
-      border-radius: 30px;
-      padding: 35px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      margin-bottom: 40px;
+    .gamelogo{
+        width:90%;
     }
 
-    .gamelogo {
-      width: 450px;
-      height: auto;
-      display: block;
-      margin: 0 auto 45px;
+    .gamebutton{
+        font-size:28px;
     }
 
-    .gamebutton {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 14px 28px;
-      background: #FD7AC0;
-      color: white;
-      text-decoration: none;
-      border-radius: 18px;
-      font-weight: bold;
-      font-size: 42px;
-      transition: background 0.2s;
-    }
-
-    .gamebutton:hover {
-      background: #f25cab;
-    }
-
-    .discord {
-      display: inline-block;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .discord img {
-      width: 60px;
-      height: auto;
-      display: block;
-    }
-  </style>
+}
+</style>
 
 </head>
 <body>
 
-  <img class="logo" src="shurikenlogo.png" alt="Shuriken Team">
+<div class="parallax-bg"></div>
 
-  <div class="gamebox">
-    <img class="gamelogo" src="sakuralogo.png" alt="Sakura">
-    <a class="gamebutton" href="https://shurikenteam.github.io/sakura">View More</a>
-  </div>
+<div class="content">
 
-  <div class="gamebox">
-    <img class="gamelogo" src="dream.png" alt="Dream">
-    <a class="gamebutton" href="https://shurikenteam.github.io/dream">View More</a>
-  </div>
+    <img class="logo" src="shurikenlogo.png" alt="Shuriken Team">
 
-  <div class="gamebox">
-    <img class="gamelogo" src="burning.png" alt="Burning">
-    <a class="gamebutton" href="https://shurikenteam.github.io/burning">View More</a>
-  </div>
+    <div class="gamebox">
+        <img class="gamelogo" src="sakuralogo.png" alt="Sakura">
+        <a class="gamebutton" href="https://shurikenteam.github.io/sakura">View More</a>
+    </div>
 
-  <div class="gamebox">
-    <img class="gamelogo" src="minigp.png" alt="MiniGP">
-    <a class="gamebutton" href="https://shurikenteam.github.io/minigp">View More</a>
-  </div>
+    <div class="gamebox">
+        <img class="gamelogo" src="dream.png" alt="Dream">
+        <a class="gamebutton" href="https://shurikenteam.github.io/dream">View More</a>
+    </div>
 
-  <a class="discord" href="https://discord.com/invite/RPwrYff5m4">
-    <img src="discord.png" alt="Discord">
-  </a>
+    <div class="gamebox">
+        <img class="gamelogo" src="burning.png" alt="Burning">
+        <a class="gamebutton" href="https://shurikenteam.github.io/burning">View More</a>
+    </div>
+
+    <div class="gamebox">
+        <img class="gamelogo" src="minigp.png" alt="MiniGP">
+        <a class="gamebutton" href="https://shurikenteam.github.io/minigp">View More</a>
+    </div>
+
+    <a class="discord" href="https://discord.com/invite/RPwrYff5m4">
+        <img src="discord.png" alt="Discord">
+    </a>
+
+</div>
 
 </body>
 </html>
